@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Maak de pagina met
-Route::get('order/{pakket_id}', 'OrderController@read');
+// Maak nieuwe order aan
+Route::get('order/create', 'OrderController@create');
+// Haal pagina op met juiste order
+Route::get('order/{pakket_id}', 'OrderController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

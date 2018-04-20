@@ -20,7 +20,7 @@ class OrderController extends Controller
     {
         if ($pakket_id == 1) {
           return view('order.ondernemers');
-        } else {
+        } elseif ($pakket_id == 2) {
           return view('order.starters');
         }
     }

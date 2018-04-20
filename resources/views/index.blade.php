@@ -10,13 +10,13 @@
           <h4 class="my-0 font-weight-normal">Starters</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+          <h2 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h2>
           <ul class="list-unstyled mt-3 mb-4">
             <li>Gratis social wifi</li>
             <li>Dropbox</li>
             <li>Email support</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Meld je nu aan!</button>
+          <button type="button" onclick="window.location='{{ url("order/1") }}'" class="btn btn-lg btn-block btn-outline-primary">Meld je nu aan!</button>
         </div>
       </div>
 
@@ -26,14 +26,14 @@
           <h4 class="my-0 font-weight-normal">Ondernemers</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+          <h2 class="card-title pricing-card-title">$55 <small class="text-muted">/ mo</small></h2>
           <ul class="list-unstyled mt-3 mb-4">
             <li>Compleet wifi pakkket</li>
             <li>Telefoon en internet</li>
             <li>Email en telefonisch support</li>
             <li>Ravonet Cloude solutions</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          <button type="button" onclick="window.location='{{ url("order/2") }}'" class="btn btn-lg btn-block btn-primary">Get started</button>
         </div>
       </div>
 
@@ -42,7 +42,7 @@
           <h4 class="my-0 font-weight-normal">Enterprise</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+          <h2 class="card-title pricing-card-title">Op aanvraag</h2>
           <ul class="list-unstyled mt-3 mb-4">
             <li>30 users included</li>
             <li>15 GB of storage</li>
