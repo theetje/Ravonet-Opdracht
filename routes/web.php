@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('order/show', 'OrderController@show');
 // Maak nieuwe order aan
 Route::get('order/{pakket_id}', 'OrderController@create');
 // Sla de Order op

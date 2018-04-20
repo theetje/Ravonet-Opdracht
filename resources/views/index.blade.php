@@ -39,17 +39,14 @@
 
       <div class="card mb-4 box-shadow">
         <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          <h4 class="my-0 font-weight-normal">Show Orders</h4>
         </div>
         <div class="card-body">
           <h2 class="card-title pricing-card-title">Op aanvraag</h2>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>30 users included</li>
-            <li>15 GB of storage</li>
-            <li>Phone and email support</li>
-            <li>Help center access</li>
+            <li>lijst van gemaakte orders</li>
           </ul>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+          <button type="button" onclick="window.location='{{ url("order/show") }}'" class="btn btn-lg btn-block btn-primary">Show</button>
         </div>
       </div>
 

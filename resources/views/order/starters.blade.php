@@ -1,14 +1,20 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
 
+  <div class="card card-default">
+  <div class="card-header">
+    <h3 class="card-title">Het starters pakkket</h3>
+  </div>
+  <div class="card-block">
 
     {!! Form::open(['url' => 'order', 'class' => '']) !!}
       <form>
 
         {{ Form::hidden('pakket', '1') }}
         {{ Form::hidden('user_id', '1') }}
-
+        <h3 class="panel-title">Maak gebruik van onze extra's</h3>
         <div class="checkbox">
           {{ Form::hidden('sneller_internet', '0') }}
           {{ Form::checkbox('sneller_internet', '1') }}
@@ -41,6 +47,9 @@
         {{ Form::submit('AFREKENEN',['class' => 'btn btn-primary']) }}
       </form>
     {!! Form::close() !!}
+
+  </div> {{-- panel-body --}}
+</div> {{-- panel panel-default --}}
 
 </div> {{-- Container --}}
 @endsection

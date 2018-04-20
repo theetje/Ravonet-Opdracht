@@ -57,7 +57,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return dd($order->all());
     }
 
     /**
