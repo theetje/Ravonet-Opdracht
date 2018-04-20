@@ -5,17 +5,26 @@ namespace App\Http\Controllers;
 use App\Order;
 use Illuminate\Http\Request;
 
+/**
+ * OrderController description TODO
+ */
 class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param int $pakket_id    geeft aan welk pakket is gekozen
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($pakket_id)
     {
-        //
+        if ($pakket_id == 1) {
+          return view('order.ondernemers');
+        } else {
+          return view('order.starters');
+        }
     }
+
 
     /**
      * Show the form for creating a new resource.

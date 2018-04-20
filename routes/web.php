@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+// Maak de pagina met
+Route::get('order/{pakket_id}', 'OrderController@read');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
