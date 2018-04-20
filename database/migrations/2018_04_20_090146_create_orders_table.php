@@ -15,6 +15,12 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('pakket');
+            $table->boolean('sneller_internet');
+            $table->boolean('wifi');
+            $table->boolean('online_telefooncentrale');
+            $table->boolean('office_365');
             $table->timestamps();
         });
     }
