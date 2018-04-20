@@ -11,7 +11,7 @@
     {!! Form::open(['url' => 'order', 'class' => 'card-block']) !!}
       <form>
 
-        {{ Form::hidden('pakket', '1') }}
+        {{ Form::hidden('pakket', '2') }}
         {{ Form::hidden('user_id', '1') }}
 
         <h3 class="panel-title">Maak gebruik van onze extra's</h3>
