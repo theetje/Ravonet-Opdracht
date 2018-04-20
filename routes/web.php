@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 
 // Maak nieuwe order aan
-Route::get('order/create', 'OrderController@create');
-// Haal pagina op met juiste order
-Route::get('order/{pakket_id}', 'OrderController@index');
+Route::get('order/{pakket_id}', 'OrderController@create');
+// Sla de Order op
+Route::post('order', 'OrderController@store');
 
 Auth::routes();
 

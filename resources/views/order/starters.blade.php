@@ -2,29 +2,45 @@
 @section('content')
 <div class="container">
 
-  {!! Form::open(['url' => 'buy/submit', 'class' => 'form-3 w-clearfix']) !!}
 
-					<!-- Amount to buy Euro -->
-					{{ Form::text('price', '', ['class' => 'euro-field w-input', 'placeholder' => 'Euro']) }}
+    {!! Form::open(['url' => 'order', 'class' => '']) !!}
+      <form>
 
-					<!-- Payment options. -->
-					{!! Form::select('issuer', $issuer, null, ['class'=>'method-field w-select']) !!}
+        {{ Form::hidden('pakket', '1') }}
+        {{ Form::hidden('user_id', '1') }}
 
-					<!-- Wallet address  -->
-					{{ Form::text('to_address', '', ['class' => 'wallet-field w-input', 'placeholder' => 'Uw bitcoinadres']) }}
+        <div class="checkbox">
+          {{ Form::hidden('sneller_internet', '0') }}
+          {{ Form::checkbox('sneller_internet', '1') }}
+          {{ Form::label('sneller_internet', 'Ik wil graag het snelste internet') }}
+        </div>
 
-					<!-- volledige naam van de klant  -->
-					{{ Form::text('client_full_name', '', ['class' => 'wallet-field w-input', 'placeholder' => 'Uw volledige naam']) }}
+        <div class="checkbox">
+          {{ Form::hidden('wifi', '0') }}
+          {{ Form::checkbox('wifi', '1') }}
+          {{ Form::label('wifi', 'Ik wil extra wifi') }}
+        </div>
 
-					<!-- Email addres van de klant  -->
-					{{ Form::text('client_email', '', ['class' => 'wallet-field w-input', 'placeholder' => 'Uw email']) }}
+        <div class="checkbox">
+          {{ Form::hidden('online_telefooncentrale', '0') }}
+          {{ Form::checkbox('online_telefooncentrale', '1') }}
+          {{ Form::label('online_telefooncentrale', 'Ik wil graag altijd iemand kunnen berijken') }}
+        </div>
 
-					<!-- TODO: Kijk of je een span kan inline kan toevoegen.-->
-					{{ Form::checkbox('terms', '', ['class' => 'w-checkbox w-checkbox-input']) }}
-					{{ Form::label('terms', 'Ik begrijp dat ik bitcoins koop en ga akkoord met de voorwaarden', ['class' => 'field-label-3 w-form-label']) }}
-					{{ Form::submit('AFREKENEN',['class' => 'submit w-button']) }}
+        <div class="checkbox">
+          {{ Form::hidden('office_365', '0') }}
+          {{ Form::checkbox('office_365', '1') }}
+          {{ Form::label('office_365', 'Ik wil offcie 365 erbij krijgen') }}
+        </div>
+        <!-- TODO: Kijk of je een span kan inline kan toevoegen.-->
+        <div class="checkbox">
+          {{ Form::checkbox('terms', '') }}
+          {{ Form::label('terms', 'Ik begrijp en ga akkoord met de voorwaarden', ['class' => 'form-check-label']) }}
+        </div>
 
-				{!! Form::close() !!}
+        {{ Form::submit('AFREKENEN',['class' => 'btn btn-primary']) }}
+      </form>
+    {!! Form::close() !!}
 
 </div> {{-- Container --}}
 @endsection

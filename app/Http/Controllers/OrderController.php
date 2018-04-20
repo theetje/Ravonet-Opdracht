@@ -13,27 +13,27 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param int $pakket_id    geeft aan welk pakket is gekozen
      * @return \Illuminate\Http\Response
      */
-    public function index($pakket_id)
+    public function index()
     {
-        if ($pakket_id == 1) {
-          return view('order.ondernemers');
-        } elseif ($pakket_id == 2) {
-          return view('order.starters');
-        }
+      //
     }
 
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param int $pakket_id    geeft aan welk pakket is gekozen
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($pakket_id)
     {
-        //
+      if ($pakket_id == 2) {
+        return view('order.ondernemers');
+      } elseif ($pakket_id == 1) {
+        return view('order.starters');
+      }
     }
 
     /**
@@ -44,7 +44,9 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Order::create($request->all());
+
+        return view('index');
     }
 
     /**
